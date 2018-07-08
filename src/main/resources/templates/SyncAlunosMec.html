@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="LayoutPadrao">
+
+<head>
+<title>Sincronismo</title>
+</head>
+
+<section layout:fragment="conteudo">
+	<div layout:include="MensagemGeral"></div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="clearfix">
+				<h1 class="panel-title aw-titulo-panel">Sincronização com o MEC</h1>
+				<a th:href="@{/alunos}" class="btn btn-default pull-right" role="button"> <span class="glyphicon glyphicon-share-alt"></span> Cadastro de Alunos</a>
+			</div>
+		</div>
+
+		<div class="container">
+		<div class="row"><br/></div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="alert alert-info" role="alert">
+						<p>Dados enviados com sucesso.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</html>
