@@ -11,42 +11,43 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Aluno {
-	
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
-	
+
 	@NotEmpty(message = "Nome é obrigatório")
 	@Size(max = 60, message = "O nome não pode conter mais de 60 caracteres")
 	private String nome;
-	
+
 	@NotEmpty(message = "Login é obrigatório")
 	@Size(max = 20, message = "O login não pode conter mais de 20 caracteres")
 	private String login;
-	
+
 	@NotEmpty(message = "Endereco é obrigatório")
 	private String endereco;
-	
+
 	@NotEmpty(message = "Bairro é obrigatório")
 	private String bairro;
-	
+
 	@NotEmpty(message = "Cidade é obrigatório")
 	private String cidade;
-	
+
 	@NotEmpty(message = "Estado é obrigatório")
 	private String estado;
-	
+
 	@NotEmpty(message = "Cep é obrigatório")
 	private String cep;
-	
+
 	@NotEmpty(message = "E-mail  é obrigatório")
 	@Email
 	private String email;
-	
+
 	@NotEmpty(message = "Telefone  é obrigatório")
 	private String telefone;
-	
+
+	private Boolean syncMec = false;
+
 	public Long getCodigo() {
 		return codigo;
 	}
@@ -127,6 +128,15 @@ public class Aluno {
 		this.telefone = telefone;
 	}
 
+	
+	public Boolean getSyncMec() {
+		return syncMec;
+	}
+
+	public void setSyncMec(Boolean syncMec) {
+		this.syncMec = syncMec;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -151,9 +161,5 @@ public class Aluno {
 			return false;
 		return true;
 	}
-	
-	
-	
-	
 
 }

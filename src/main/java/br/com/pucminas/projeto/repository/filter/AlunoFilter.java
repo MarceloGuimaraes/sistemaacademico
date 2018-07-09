@@ -1,7 +1,7 @@
 package br.com.pucminas.projeto.repository.filter;
 
 public class AlunoFilter {
-	
+
 	private String nome;
 
 	public String getNome() {
@@ -11,9 +11,5 @@ public class AlunoFilter {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	
-
-	
 
 }
