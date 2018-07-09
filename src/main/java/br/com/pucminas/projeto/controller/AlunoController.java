@@ -29,7 +29,7 @@ public class AlunoController {
 	private static final Logger LOGGER = Logger.getLogger(AlunoController.class);
 
 	private static final String CADASTRO_VIEW = "CadastroAluno";
-	private static final String SYNC_MEC = "SyncAlunosMec";
+	private static final String SYNC_MEC = "SincronismoMec";
 
 	private static final String CONS_URL_MEC = "https://mockmec.herokuapp.com/mecalunosync";
 

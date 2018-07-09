@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="LayoutPadrao">
+
+<head>
+	<title>Cadastro de Cursos</title>
+</head>
+
+<section layout:fragment="conteudo">
+    <form class="form-horizontal" method="POST" th:action="@{/cursos}" th:object="${cursos}">
+    	<div layout:include="MensagemGeral"></div>
+    	<div layout:include="MensagemErro"></div>
+    
+    	<div class="panel panel-default">
+    		<div class="panel-heading">
+    			<div class="clearfix">
+	   				<h1 class="panel-title aw-titulo-panel">Novo Curso</h1>
+	   				<a th:href="@{/cursos}" class="btn btn-default pull-right" role="button"> <span class="glyphicon glyphicon-share-alt"></span> Cadastro de Cursos</a>
+	   			</div>
+    		</div>
+    		
+    		<div class="panel-body">
+    			<input type="hidden" th:field="*{codigo}"/>
+    		
+				<div class="form-group" th:classappend="${#fields.hasErrors('nome')} ? has-error">
+					<label for="nome" class="col-sm-2 control-label">Nome</label>
+					<div class="col-sm-4"> 
+						<input type="text" class="form-control" id="nome" th:field="*{nome}"/>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Salvar</button>
+						<a th:href="@{/}" class="btn btn-default">Cancelar</a>
+					</div>
+				</div>
+			</div>
+    	</div>
+    </form>
+</section>
+</html>

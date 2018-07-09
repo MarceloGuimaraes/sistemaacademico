@@ -9,11 +9,16 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/sync")
 public class SyncMecController {
 
-	private static final String SYNC_MEC = "SyncAlunosMec";
+	private static final String SYNC_MEC = "SincronismoMec";
 
 	@RequestMapping(value = "/alunos", method = RequestMethod.POST)
 	public String alunos() {
 		return "redirect:/alunos";
+	}
+	
+	@RequestMapping(value = "/cursos", method = RequestMethod.POST)
+	public String cursos() {
+		return "redirect:/cursos";
 	}
 
 	@RequestMapping("/sync")

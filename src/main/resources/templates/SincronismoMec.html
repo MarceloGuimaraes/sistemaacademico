@@ -6,6 +6,11 @@
 
 <head>
 <title>Sincronismo</title>
+<style type="text/css">
+.btn-space {
+	margin-right: 5px;
+}
+</style>
 </head>
 
 <section layout:fragment="conteudo">
@@ -15,12 +20,20 @@
 		<div class="panel-heading">
 			<div class="clearfix">
 				<h1 class="panel-title aw-titulo-panel">Sincronização com o MEC</h1>
-				<a th:href="@{/alunos}" class="btn btn-default pull-right" role="button"> <span class="glyphicon glyphicon-share-alt"></span> Cadastro de Alunos</a>
+				<a th:href="@{/alunos}" class="btn btn-default pull-right btn-space"
+					role="button"> <span class="glyphicon glyphicon-share-alt"></span>
+					Cadastro de Alunos
+				</a> <a th:href="@{/cursos}" class="btn btn-default pull-right"
+					role="button"> <span class="glyphicon glyphicon-share-alt"></span>
+					Cadastro de Cursos
+				</a>
 			</div>
 		</div>
 
 		<div class="container">
-		<div class="row"><br/></div>
+			<div class="row">
+				<br />
+			</div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="alert alert-info" role="alert">

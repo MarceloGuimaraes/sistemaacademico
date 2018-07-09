@@ -16,9 +16,7 @@ public class CadastroAlunoService {
 	private Alunos alunos;
 
 	public void salvar(Aluno aluno) {
-
 		alunos.save(aluno);
-
 	}
 
 	public void excluir(Long codigo) {
